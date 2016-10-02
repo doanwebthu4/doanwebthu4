@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Đăng Nhập</title>
+<link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.them.min.css">
+<style type="text/css">
+  body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+</style>
+<link rel="stylesheet" media="all" type="text/css" href="public/css/style.css" />
+</head>
+<body>
+	 <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading"><p align="center"  ><font size="6">ĐĂNG NHẬP</font> </p> </h2><br>
+
+        <label for="inputUser" class="sr-only" >User</label>
+        <input type="text" id="inputUser"  class="form-control" placeholder="Tên Đăng Nhập" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword"  class="form-control" placeholder="Mật Khẩu" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Nhớ tài khoản
+          </label><br>
+           <a href="QuenMatKhau.html"><font color="red"><u>Quên mật khẩu</u></font></a>        
+           
+        </div>
+         <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="check(this.form)" >Đăng Nhập</button>
+      </form>
+      <!--login scrpipt-->
+        <script language="javascript">
+            function check(form) { 
+                if(form.inputUser.value=="giaovien1"&& form.inputPassword.value=="123") {
+                    alert("Đăng nhập thành công (giảng viên)");
+                    window.open('file:///C://HTML//giangvien/trang-chu.html');             
+                }else if(form.inputUser.value=="sinhvien1" && form.inputPassword.value=="123"){
+                   alert("Đăng nhập thành công (sinh viên)");
+                  window.open('file:///C://HTML//sv/trang-chu.html');  
+                }
+                else {
+                    alert("Đăng nhập thất bại");
+                       
+                }
+            }
+          </script>
+    </div> <!-- /container -->
+	<script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
+ 	<script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
+</body>
